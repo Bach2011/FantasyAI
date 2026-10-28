@@ -1,0 +1,95 @@
+position,factor,rho,n,label
+GK,assists_last5,0.036998743973875745,9479,"Assists, last 5 (mean)"
+GK,bonus_last5,0.17476019050343827,9479,"Bonus, last 5 (mean)"
+GK,bps_last5,0.39170809935685125,9479,"BPS, last 5 (mean)"
+GK,chances_last5,0.05484243090864854,1006,"Chances created, last 5"
+GK,cs_last5,0.27931520129964704,9479,"Clean sheets, last 5 (mean)"
+GK,elo_diff,0.08614883475320044,1000,Elo difference (team - opp)
+GK,goals_last5,0.02724090597832457,9479,"Goals, last 5 (mean)"
+GK,home,0.026158084899619325,9479,Playing at home
+GK,ict_last5,0.32105711011799976,9479,"ICT index, last 5 (mean)"
+GK,mins_last5,0.45418046047798194,9479,"Minutes, last 5 (mean)"
+GK,mins_prev_match,0.5351011994073731,9479,"Minutes, previous match"
+GK,opp_gd_last10,-0.0742678299096893,9462,"Opponent GD/match, last 10"
+GK,price_m,0.28478211215299093,9479,FPL price (GBP m)
+GK,pts_last10,0.3786956589836343,9479,"Points, last 10 (mean)"
+GK,pts_last3,0.3873323662170958,9479,"Points, last 3 (mean)"
+GK,pts_last5,0.37794376756400894,9479,"Points, last 5 (mean)"
+GK,rest_days,-0.023687411783120615,9477,Rest days since last match
+GK,starts60_last5,0.45143266866731596,9479,"60+ min games, last 5"
+GK,strength_diff,0.10904165605251391,9460,Team minus opponent GD
+GK,team_gd_last10,0.07320765025864757,9477,"Own team GD/match, last 10"
+GK,xa_last5,0.15953757803213173,4019,"xA, last 5 (mean)"
+GK,xg_last5,0.0011011543894380038,4019,"xG, last 5 (mean)"
+DEF,assists_last5,0.1195218492230205,51050,"Assists, last 5 (mean)"
+DEF,bonus_last5,0.19892090431425,51050,"Bonus, last 5 (mean)"
+DEF,bps_last5,0.35741588683140274,51050,"BPS, last 5 (mean)"
+DEF,chances_last5,0.16549496985558432,5889,"Chances created, last 5"
+DEF,cs_last5,0.2630114259450839,51050,"Clean sheets, last 5 (mean)"
+DEF,defcon_last5,0.37647726376538837,5994,"Defensive contributions, last 5"
+DEF,elo_diff,0.07887317865376836,5548,Elo difference (team - opp)
+DEF,goals_last5,0.10298350117945378,51050,"Goals, last 5 (mean)"
+DEF,home,0.04176329362092343,51050,Playing at home
+DEF,ict_last5,0.352190362977117,51050,"ICT index, last 5 (mean)"
+DEF,mins_last5,0.37435896533018975,51050,"Minutes, last 5 (mean)"
+DEF,mins_prev_match,0.42472739246154256,51050,"Minutes, previous match"
+DEF,opp_gd_last10,-0.0856922240979197,50958,"Opponent GD/match, last 10"
+DEF,price_m,0.19705601206379675,51050,FPL price (GBP m)
+DEF,pts_last10,0.32160366944453866,51050,"Points, last 10 (mean)"
+DEF,pts_last3,0.3650914155443021,51050,"Points, last 3 (mean)"
+DEF,pts_last5,0.34285907611965777,51050,"Points, last 5 (mean)"
+DEF,rest_days,-0.009436245632011307,51040,Rest days since last match
+DEF,shots_last5,0.21911357788563213,5804,"Shots, last 5 (mean)"
+DEF,starts60_last5,0.36935942622851475,51050,"60+ min games, last 5"
+DEF,strength_diff,0.11545222147069652,50948,Team minus opponent GD
+DEF,team_gd_last10,0.07398078599220907,51040,"Own team GD/match, last 10"
+DEF,xa_last5,0.2507720695591419,21977,"xA, last 5 (mean)"
+DEF,xg_last5,0.22609362783064202,21977,"xG, last 5 (mean)"
+MID,assists_last5,0.2469906635923646,66411,"Assists, last 5 (mean)"
+MID,bonus_last5,0.27436368149532364,66411,"Bonus, last 5 (mean)"
+MID,bps_last5,0.4600608798060562,66411,"BPS, last 5 (mean)"
+MID,chances_last5,0.3204024926956501,7758,"Chances created, last 5"
+MID,cs_last5,0.31395817040171564,66411,"Clean sheets, last 5 (mean)"
+MID,defcon_last5,0.4491771198321856,7910,"Defensive contributions, last 5"
+MID,elo_diff,0.04793635495044116,7307,Elo difference (team - opp)
+MID,goals_last5,0.26435050923375303,66411,"Goals, last 5 (mean)"
+MID,home,0.03016160976288123,66411,Playing at home
+MID,ict_last5,0.4724988487518182,66411,"ICT index, last 5 (mean)"
+MID,mins_last5,0.47163847038121487,66411,"Minutes, last 5 (mean)"
+MID,mins_prev_match,0.5094794669647889,66411,"Minutes, previous match"
+MID,opp_gd_last10,-0.035674417851799096,66282,"Opponent GD/match, last 10"
+MID,price_m,0.25120851816159473,66411,FPL price (GBP m)
+MID,pts_last10,0.4402952810150782,66411,"Points, last 10 (mean)"
+MID,pts_last3,0.4857664478050552,66411,"Points, last 3 (mean)"
+MID,pts_last5,0.4642017156485207,66411,"Points, last 5 (mean)"
+MID,rest_days,-0.009136576786906053,66404,Rest days since last match
+MID,shots_last5,0.3011388104712695,7686,"Shots, last 5 (mean)"
+MID,starts60_last5,0.4552409305404154,66411,"60+ min games, last 5"
+MID,strength_diff,0.07880252364475643,66275,Team minus opponent GD
+MID,team_gd_last10,0.0705452829524386,66404,"Own team GD/match, last 10"
+MID,xa_last5,0.3547906560975292,29245,"xA, last 5 (mean)"
+MID,xg_last5,0.3338936807967717,29245,"xG, last 5 (mean)"
+FWD,assists_last5,0.22231158975165616,19635,"Assists, last 5 (mean)"
+FWD,bonus_last5,0.3360013671300989,19635,"Bonus, last 5 (mean)"
+FWD,bps_last5,0.42979465334423334,19635,"BPS, last 5 (mean)"
+FWD,chances_last5,0.3077926938636968,1961,"Chances created, last 5"
+FWD,cs_last5,0.32252498125713214,19635,"Clean sheets, last 5 (mean)"
+FWD,defcon_last5,0.4777427693672137,2007,"Defensive contributions, last 5"
+FWD,elo_diff,0.07708908754383616,1838,Elo difference (team - opp)
+FWD,goals_last5,0.36379181421138207,19635,"Goals, last 5 (mean)"
+FWD,home,0.019432516711947935,19635,Playing at home
+FWD,ict_last5,0.47754475048759965,19635,"ICT index, last 5 (mean)"
+FWD,mins_last5,0.49196131457110776,19635,"Minutes, last 5 (mean)"
+FWD,mins_prev_match,0.5461106658059336,19635,"Minutes, previous match"
+FWD,opp_gd_last10,-0.05134392041357672,19597,"Opponent GD/match, last 10"
+FWD,price_m,0.28918039794317596,19635,FPL price (GBP m)
+FWD,pts_last10,0.44882432360119917,19635,"Points, last 10 (mean)"
+FWD,pts_last3,0.49010004567804694,19635,"Points, last 3 (mean)"
+FWD,pts_last5,0.46910934488914763,19635,"Points, last 5 (mean)"
+FWD,rest_days,-0.014577872724584528,19631,Rest days since last match
+FWD,shots_last5,0.37851667166206066,1943,"Shots, last 5 (mean)"
+FWD,starts60_last5,0.46435396941399815,19635,"60+ min games, last 5"
+FWD,strength_diff,0.08949456330124415,19593,Team minus opponent GD
+FWD,team_gd_last10,0.07741203829176886,19631,"Own team GD/match, last 10"
+FWD,xa_last5,0.3416173869767338,7439,"xA, last 5 (mean)"
+FWD,xg_last5,0.3684137631693046,7439,"xG, last 5 (mean)"

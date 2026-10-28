@@ -26,6 +26,9 @@ mh = sd.MatchHistory(leagues="ENG-Premier League", seasons=list(range(2016, 2027
 odds = mh.read_games()
 
 #offical players FPL API
+import truststore
+truststore.inject_into_ssl()
+
 import requests
 boot = requests.get("https://fantasy.premierleague.com/api/bootstrap-static/").json()
 players = pd.DataFrame(boot["elements"])[["id","code","status","chance_of_playing_next_round","news","news_added"]]
