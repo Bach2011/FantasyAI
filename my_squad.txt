@@ -1,0 +1,17 @@
+Haaland, MCI (C)
+Cherki, MCI
+Raya, ARS
+Murillo, NFO
+Gvardiol, MCI
+Vuskovic, BHA
+Dunk, BHA
+De Cuyper, BHA
+Rayan, BOU
+Tavernier, BOU
+Ødegaard, ARS
+João Pedro, CHE
+Trafford, LEE
+Tzolis, ARS
+Thiago, BRE
+bank: 0.0
+free transfers: 5

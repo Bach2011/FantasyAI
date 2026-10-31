@@ -19,7 +19,6 @@ Usage:
   python train_models.py --data data/clean --out results
 """
 import argparse
-import json
 import os
 from pathlib import Path
 
@@ -54,14 +53,26 @@ def build_features(data_dir: Path) -> tuple[pd.DataFrame, list[str]]:
     pms = pd.read_csv(data_dir / "player_match_stats.csv", low_memory=False)
     tms = pd.read_csv(data_dir / "team_match_stats.csv", low_memory=False)
     matches = pd.read_csv(data_dir / "matches.csv", usecols=["match_id", "gameweek"])
+    pms = pms.merge(matches, on="match_id", how="left")
+    return make_features(pms, tms)
 
+
+def make_features(pms: pd.DataFrame, tms: pd.DataFrame, keep_all: bool = False):
+    """Turn player-match and team-match rows into pre-kickoff features.
+
+    pms must have a `gameweek` column. Rows for a future match may have NaN stats;
+    only earlier rows feed its features. keep_all=True skips the training-population
+    filter (used when predicting a single player's next match).
+    """
+    pms = pms.copy()
+    tms = tms.copy()
     pms["kickoff_time"] = pd.to_datetime(pms["kickoff_time"], utc=True)
     pms = pms.sort_values(["player_code", "kickoff_time", "match_id"]).reset_index(drop=True)
-    pms = pms.merge(matches, on="match_id", how="left")
-    pms["played"] = (pms["minutes"] > 0).astype(float)
-    pms["started60"] = (pms["minutes"] >= 60).astype(float)
-    pms["return4"] = (pms["total_points"] >= 4).astype(float)
-    pms["haul10"] = (pms["total_points"] >= 10).astype(float)
+    # .where keeps NaN for a future match instead of turning it into 0
+    pms["played"] = (pms["minutes"] > 0).astype(float).where(pms["minutes"].notna())
+    pms["started60"] = (pms["minutes"] >= 60).astype(float).where(pms["minutes"].notna())
+    pms["return4"] = (pms["total_points"] >= 4).astype(float).where(pms["total_points"].notna())
+    pms["haul10"] = (pms["total_points"] >= 10).astype(float).where(pms["total_points"].notna())
     if "defensive_contribution" not in pms:
         pms["defensive_contribution"] = np.nan
 
@@ -125,8 +136,9 @@ def build_features(data_dir: Path) -> tuple[pd.DataFrame, list[str]]:
 
     # Same population as the R analysis, decided before kickoff:
     # at least 5 previous listed matches and at least 1 appearance in the last 5.
-    df = df[(df["matches_before"] >= 5) & (df["played_last5"] >= 1)].copy()
-    df = df.dropna(subset=["team_gd10", "opp_gd10"]).reset_index(drop=True)
+    if not keep_all:
+        df = df[(df["matches_before"] >= 5) & (df["played_last5"] >= 1)].copy()
+        df = df.dropna(subset=["team_gd10", "opp_gd10"]).reset_index(drop=True)
 
     feature_cols = [c for c in f.columns] + [
         "team_goals_for10", "team_goals_against10", "team_gd10", "opp_goals_for10",
